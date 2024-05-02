@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export function AlertScreen() {
+export function ModalScreen() {
   return (
     <View>
-      <Text>AlertScreen</Text>
+      <Text>ModalScreen</Text>
     </View>
   )
 }

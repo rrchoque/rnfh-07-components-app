@@ -1,12 +1,10 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text } from 'react-native'
+import React from 'react'
 
-export default class SwitchScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text>SwitchScreen</Text>
-      </View>
-    )
-  }
+export function SwitchScreen() {
+  return (
+    <View>
+      <Text>SwitchScreen</Text>
+    </View>
+  )
 }
