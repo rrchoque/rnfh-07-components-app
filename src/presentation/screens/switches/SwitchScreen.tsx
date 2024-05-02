@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { CustomView } from '../../components'
 
 export function SwitchScreen() {
   return (
-    <View>
-      <Text>SwitchScreen</Text>
-    </View>
+    <CustomView style={{marginTop: 100, paddingHorizontal: 10}}>
+
+    </CustomView>
   )
 }
