@@ -2,8 +2,7 @@ import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Text, View } from "react-native";
-import Navigator from './navigator/Navigation';
+import Navigator from './presentation/navigator/Navigator';
 
 function ComponentsApp(): React.JSX.Element {
   return (
