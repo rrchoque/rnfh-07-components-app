@@ -2,6 +2,7 @@ import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../../config/theme/theme';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
+import { Separator } from './Separator';
 
 interface Props {
   name: string;
@@ -53,6 +54,8 @@ export const MenuItem = ({
           />
         </View>
       </Pressable>
+
+      {!isLast && <Separator />}
     </>
   );
 };
