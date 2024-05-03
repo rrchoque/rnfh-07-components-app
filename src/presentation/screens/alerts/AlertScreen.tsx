@@ -5,6 +5,8 @@ import {CustomView} from '../../components/ui/CustomView';
 import {Title} from '../../components/ui/Title';
 import {globalStyles} from '../../../config/theme/theme';
 import {Button} from '../../components/ui/Button';
+import prompt from 'react-native-prompt-android';
+import { showPrompt } from '../../../config/adapters/prompt.adapter';
 
 export const AlertScreen = () => {
 
@@ -34,15 +36,25 @@ export const AlertScreen = () => {
 
     const onShowPrompt = () => {
 
-      Alert.prompt(
-        'Correo electronico',
-        'Enim commodo ut amet esse aliqua.',
-        (valor: string) => console.log({valor}),
-        'secure-text',
-        'Soy el valor por defecto',
-        'number-pad'
-      );
+    // ! Código nativo
+    // Alert.prompt(
+    //   'Correo electronico',
+    //   'Enim commodo ut amet esse aliqua.',
+    //   (valor: string) => console.log({valor}),
+    //   'secure-text',
+    //   'Soy el valor por defecto',
+    //   'number-pad'
+    // );
   
+      showPrompt({
+        title: 'Lorem Ipsum',
+        subTitle: 'Nostrud qui duis officia dolor enim.',
+        buttons: [
+          { text: 'Ok', onPress: () => console.log('ok') }
+        ],
+        placeholder: 'Placeholder'
+      });
+
     };
 
   return (
