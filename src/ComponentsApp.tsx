@@ -6,22 +6,32 @@ import Navigator from './presentation/navigator/Navigator';
 import { PropsWithChildren } from 'react';
 import { ThemeProvider } from './presentation/context/ThemeContext';
 
-const AppState = ({ children } : PropsWithChildren) => {
+
+
+const AppNavigation = ({ children } : PropsWithChildren) => {
   return(
     <NavigationContainer>
-      <ThemeProvider>
         { children }
-      </ThemeProvider>
     </NavigationContainer>
   )
 }
 
+const AppTheme = ({ children } : PropsWithChildren) => {
+  return (
+    <ThemeProvider>
+      <AppNavigation>
+        { children }
+      </AppNavigation>
+      
+    </ThemeProvider>
+  )
+}
 
 function ComponentsApp(): React.JSX.Element {
   return (
-    <AppState>
+    <AppTheme>
       <Navigator />
-    </AppState>
+    </AppTheme>
     
   );
 };
