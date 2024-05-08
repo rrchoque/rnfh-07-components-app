@@ -1,8 +1,9 @@
 import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import { globalStyles } from '../../../config/theme/theme';
 import { ScrollView } from 'react-native-gesture-handler';
-import { MenuItem, Title } from '../../components';
+import { CustomView, MenuItem, Title } from '../../components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const animationMenuItems = [
   {
@@ -70,8 +71,7 @@ const uiMenuItems = [
 export default class HomeScreen extends Component {
   render() {
     return (
-      <View style={[globalStyles.mainContainer ]}>
-        <View style={globalStyles.globalMargin}>
+      <CustomView>
         <ScrollView>
           <Title text="Opciones del menú" safe />
 
@@ -106,8 +106,7 @@ export default class HomeScreen extends Component {
 
           <View style={{marginTop: 30}} />
         </ScrollView>
-        </View>
-      </View>
+      </CustomView>
     )
   }
 }

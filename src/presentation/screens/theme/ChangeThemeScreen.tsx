@@ -6,11 +6,11 @@ import { ThemeContext } from '../../context/ThemeContext';
 
 export const ChangeThemeScreen = () => {
 
-  const { setTheme } = useContext( ThemeContext );
+  const { setTheme, currentTheme, colors } = useContext( ThemeContext );
 
   return (
     <CustomView margin>
-      <Title text={`Cambiar tema`} safe />
+      <Title text={`Cambiar tema ${ currentTheme }`} safe />
 
       <Button 
         text="Light"
@@ -23,6 +23,11 @@ export const ChangeThemeScreen = () => {
         text="Dark"
         onPress={() => { setTheme('dark')}}
       />
+
+      <Text style={{ color: colors.text }}>
+        { JSON.stringify( colors, null, 2 ) }
+      </Text>
+
     </CustomView>
   )
 }

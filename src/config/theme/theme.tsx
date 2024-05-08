@@ -29,7 +29,6 @@ export const lightColors: ThemeColors = {
 export const darkColors: ThemeColors = {
   primary: '#5856D6',
   text: 'white',
-
   background: '#090909',
   cardBackground: '#2d2d2d',
   buttonTextColor: 'white',
@@ -39,7 +38,7 @@ export const globalStyles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "bold",
-    color: colors.text,
+    //color: colors.text,
   },
   subTitle: {
     fontSize: 20,
@@ -49,7 +48,7 @@ export const globalStyles = StyleSheet.create({
 
   mainContainer: {
     flex: 1,
-    backgroundColor: colors.background,
+    //backgroundColor: colors.background,
   },
   globalMargin: {
     paddingHorizontal: 20,
@@ -57,13 +56,13 @@ export const globalStyles = StyleSheet.create({
   },
 
   btnPrimary: {
-    backgroundColor: colors.primary,
+    //backgroundColor: colors.primary,
     borderRadius: 10,
     padding: 10,
     alignItems: "center",
   },
   btnPrimaryText: {
-    color: colors.text,
+    //color: colors.text,
     fontSize: 16,
   },
   input: {
@@ -73,6 +72,6 @@ export const globalStyles = StyleSheet.create({
     padding: 10,
     borderColor: 'rgba(0,0,0,0.3)',
     borderRadius: 10,
-    color: colors.text,
+    //color: colors.text,
   },
 });
