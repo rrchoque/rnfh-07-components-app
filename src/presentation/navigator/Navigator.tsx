@@ -11,13 +11,20 @@ import { AlertScreen } from '../screens/alerts/AlertScreen';
 import { TextInputScreen } from '../screens/inputs/TextInputScreen';
 import { SlidesScreen } from '../screens/ui/SlidesScreen';
 import { ChangeThemeScreen } from '../screens/theme/ChangeThemeScreen';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Stack = createStackNavigator();
 
 function Navigator() {
+  const {colors} = useContext(ThemeContext);
+
   return (
     <Stack.Navigator screenOptions={{
-        headerShown: false
+        headerShown: false,
+        cardStyle: {
+          backgroundColor: colors.background
+        }
       }}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Animation101Screen" component={Animation101Screen} />
