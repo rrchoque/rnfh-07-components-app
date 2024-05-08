@@ -9,6 +9,8 @@ import { ModalScreen } from '../screens/ui/ModalScreen';
 import { InfiniteScrollScreen } from '../screens/ui/InfiniteScrollScreen';
 import { AlertScreen } from '../screens/alerts/AlertScreen';
 import { TextInputScreen } from '../screens/inputs/TextInputScreen';
+import { SlidesScreen } from '../screens/ui/SlidesScreen';
+import { ChangeThemeScreen } from '../screens/theme/ChangeThemeScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +31,9 @@ function Navigator() {
       <Stack.Screen name="CustomSectionListScreen" component={CustomSectionListScreen} />
       <Stack.Screen name="ModalScreen" component={ModalScreen} />
       <Stack.Screen name="InfiniteScrollScreen" component={InfiniteScrollScreen} />
+
+      <Stack.Screen name="SlidesScreen" component={SlidesScreen} />
+      <Stack.Screen name="ChangeThemeScreen" component={ChangeThemeScreen} />
     </Stack.Navigator>
   );
 }
